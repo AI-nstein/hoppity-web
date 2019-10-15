@@ -1,0 +1,7 @@
+if (matches) {
+  return {
+    // should omit the parenthesis     v here and    v here
+    hosts: matches.groups.hosts.split(/([,&]+|\sand\s)/).
+      map(e1 => S(e1).trim().s)
+  };
+}
