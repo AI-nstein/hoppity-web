@@ -1,18 +1,23 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 
-const find_bug = require("./find_bug");
+const { find_bug, find_bug_test } = require("./find_bug");
 
 const app = express();
 const port = 8086;
 
-app.get('/hoppity/test', (req, res) => {
+const jsonParser = bodyParser.json()
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+app.use(urlencodedParser);
+
+app.get('/test', (req, res) => {
   res.send("Hello world");
 });
 
-app.get('/hoppity/find_bug', (req, res) => {
-  res.send("Find bug only accepts post request");
-});
+app.get('/find_bug', find_bug_test);
 
-app.post('/hoppity/find_bug', find_bug);
+app.post('/find_bug', find_bug);
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Hoppity backend listening on port ${port}!`));
