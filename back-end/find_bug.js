@@ -77,6 +77,13 @@ function find_bug(req, res) {
               const result = JSON.parse(stdout.split('\n')[4]);
               res.json({ content: result });
             }
+
+            // Delete the generated files
+            fs.unlink(file_dir, () => {
+              fs.unlink(ast_dir, () => {
+                // do nothing
+              })
+            })
           })
         }
       });
@@ -102,7 +109,7 @@ function find_bug(req, res) {
         }
       });
     }
-  });  
+  });
   */
 }
 
