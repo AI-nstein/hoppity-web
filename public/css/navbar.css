@@ -1,3 +1,19 @@
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {display: block; float:right; color: #CD5C5C;}
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive a {display: block; color: #CD5C5C;}
+  .navbar.responsive {position: relative;}
+}
+
+
+.navbar .icon {
+	display: none;
+}
+
+
 .navbar-brand {
     font-size: xx-large;
     /* font-family: 'Courier New', Courier, monospace; */
