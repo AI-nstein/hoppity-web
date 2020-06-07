@@ -4,4 +4,18 @@ a.home-link {
 
 .home-img {
 	width: 45%;
+	min-width: 350px;
 }
+
+@media screen and (max-width: 600px) {
+ 	h1 {
+		font-size: 1.3em;
+	}	
+}
+
+@media screen and (max-width: 350px) {
+ 	h1 {
+		font-size: 1em;
+	}	
+}
+
