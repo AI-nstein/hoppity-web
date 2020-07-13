@@ -3,7 +3,7 @@ const fs = require("fs");
 const crypto = require('crypto');
 const parse = require("shift-parser").parseModule;
 
-const STORAGE_BASE = "/home/liby99/projects/hoppity-storage/";
+const STORAGE_BASE = "/home/edinella/hoppity-storage/";
 const BEST_MODEL_CKPT = "/home/edinella/best-model.ckpt";
 const VOCAB_FIXES_NPY = "/home/edinella/vocab_fixes.npy";
 const TYPE_VOCAB_PKL = "/home/edinella/type_vocab.pkl";
